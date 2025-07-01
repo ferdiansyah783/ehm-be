@@ -34,8 +34,8 @@ $ yarn install
 ## Compile and run the project
 
 ```bash
-# development
-$ yarn run start
+# run migration
+$ yarn migration:run or yarn schema:sync
 
 # watch mode
 $ yarn run start:dev
