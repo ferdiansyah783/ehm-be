@@ -48,17 +48,11 @@ $ yarn run start:dev
 $ yarn run start:prod
 ```
 
-## Run tests
+## Open documentation 
 
 ```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
+# docs
+$ open http://localhost:3001/api/docs
 ```
 
 ## Deployment
