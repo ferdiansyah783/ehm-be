@@ -28,6 +28,10 @@
 ## Project setup
 
 ```bash
+# config .env
+$ change .env.example to .env
+
+# install dependency
 $ yarn install
 ```
 
