@@ -22,7 +22,5 @@ $ yarn run start:dev
 
 ## Open documentation 
 
-```bash
 # docs
 $ open http://localhost:3001/api/docs
-```
