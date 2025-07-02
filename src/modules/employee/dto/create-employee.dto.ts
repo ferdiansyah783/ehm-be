@@ -7,10 +7,10 @@ import {
 } from '../../../decorators/field.decorator';
 
 export class CreateEmployeeDto {
-  @StringField()
+  @StringField({ minLength: 3 })
   readonly firstName: string;
 
-  @StringField()
+  @StringField({ minLength: 3 })
   readonly lastName: string;
 
   @EmailField({ example: 'string@gmail.com' })

@@ -8,10 +8,10 @@ import {
 } from '../../../decorators/field.decorator';
 
 export class AdminRegisterDto {
-  @StringField()
+  @StringField({ minLength: 3 })
   readonly firstName: string;
 
-  @StringField()
+  @StringField({ minLength: 3 })
   readonly lastName: string;
 
   @EmailField({ example: 'string@gmail.com' })

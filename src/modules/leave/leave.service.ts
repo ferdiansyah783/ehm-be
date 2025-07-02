@@ -43,6 +43,10 @@ export class LeaveService {
       (end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24) + 1,
     );
 
+    if (leaveDays !== 2) {
+      throw new BadRequestException('Leave must be exactly 1 day');
+    }
+
     const year = start.getFullYear();
 
     const totalLeaveThisYear = await this.leaveRepository
@@ -70,6 +74,8 @@ export class LeaveService {
         { month, year },
       )
       .getCount();
+
+    console.log('existingLeaveInMonth', existingLeaveInMonth);
 
     if (existingLeaveInMonth >= 1) {
       throw new BadRequestException('Leave can only be taken once per month');

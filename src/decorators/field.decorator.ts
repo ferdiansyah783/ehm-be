@@ -9,6 +9,7 @@ import {
   IsEmail,
   IsEnum,
   IsInt,
+  IsNotEmpty,
   IsNumber,
   IsPositive,
   IsString,
@@ -308,6 +309,10 @@ export function DateField(
   options: Omit<ApiPropertyOptions, 'type'> & IFieldOptions = {},
 ): PropertyDecorator {
   const decorators = [IsDateStringFormat()];
+
+  if (options.required !== false) {
+    decorators.push(IsNotEmpty());
+  }
 
   if (options.nullable) {
     decorators.push(IsNullable());
