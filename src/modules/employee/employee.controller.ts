@@ -23,7 +23,7 @@ export class EmployeeController {
   constructor(private readonly employeeService: EmployeeService) {}
 
   @Post()
-  // @Auth()
+  @Auth()
   async create(
     @Body() createEmployeeDto: CreateEmployeeDto,
   ): Promise<EmployeeDto> {
@@ -33,7 +33,7 @@ export class EmployeeController {
   }
 
   @Get()
-  // @Auth()
+  @Auth()
   async findAll(
     @Query(new ValidationPipe({ transform: true }))
     pageOptionsDto: PageOptionsDto,

@@ -35,7 +35,7 @@ export class AdminController {
   }
 
   @Put(':id')
-  // @Auth()
+  @Auth()
   async update(
     @Param('id') id: number,
     @Body() updateAdminDto: UpdateAdminDto,
