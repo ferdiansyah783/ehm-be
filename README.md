@@ -19,8 +19,11 @@ $ yarn migration:run or yarn schema:sync
 
 # watch mode
 $ yarn run start:dev
+```
 
 ## Open documentation 
 
+```bash
 # docs
 $ open http://localhost:3001/api/docs
+```
